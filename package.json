@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/teenie-quaggard/google-books-cli/issues"
   },
-  "homepage": "https://github.com/teenie-quaggard/google-books-cli#readme"
+  "homepage": "https://github.com/teenie-quaggard/google-books-cli#readme",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
