@@ -1,0 +1,22 @@
+{
+  "name": "google-books-cli",
+  "version": "1.0.0",
+  "description": "A simple CLI that allow one to search the Google Books API and save a reading list.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "bin": {
+    "search": "bin/search"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teenie-quaggard/google-books-cli.git"
+  },
+  "author": "Kristina-Talisa Jaggard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teenie-quaggard/google-books-cli/issues"
+  },
+  "homepage": "https://github.com/teenie-quaggard/google-books-cli#readme"
+}
