@@ -2,10 +2,10 @@ const menus = {
   main: `
     books-cli [command] <options>
 
-    search......................search Google API for a book using a keyword. Should be paired with the --keyword flag and a search phrase.
-    save........................save a book to a reading list. Should be paired with the --id flag and the ID of a book you'd like to save.
-    version.....................show package version
-    help........................show help menu for a command`,
+    search.....search Google API for a book using a keyword. Should be paired with the --keyword flag and a search phrase.
+    save.......save a book to a reading list. Should be paired with the --id flag and the ID of a book you'd like to save.
+    version....show package version
+    help.......show help menu for a command`,
 
   books: `
     books-cli search <options>
