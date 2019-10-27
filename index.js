@@ -15,8 +15,8 @@ module.exports = () => {
   }
 
   switch (command) {
-    case 'books':
-      require('./commands/books')(args);
+    case 'search':
+      require('./commands/search')(args);
       break;
     case 'save':
       require('./commands/save')(args);

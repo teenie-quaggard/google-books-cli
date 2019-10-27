@@ -1,5 +1,5 @@
 const ora = require('ora');
-const bookRequest = require('../utils/bookRequest.js');
+const bookRequest = require('../utils/searchRequest.js');
 
 module.exports = async args => {
   const spinner = ora().start();

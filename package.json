@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "bin": {
-    "search": "bin/search"
+    "books-cli": "bin/books-cli"
   },
   "repository": {
     "type": "git",
