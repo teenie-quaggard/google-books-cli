@@ -10,19 +10,25 @@ module.exports = async args => {
     spinner.stop();
 
     /**********************RESPONSE**************************/
-    console.log(`You searched for "${keyword}".`);
+    console.log(
+      `\n
+      _____________________________________________________________
+      \n
+      You searched for: "${keyword}". \n
+      Here are five books related to your search. If you are interested in saving one to your reading list \n
+      
+      _____________________________________________________________
+      `
+    );
     books.forEach(book => {
-      const info = book.volumeInfo;
-
       console.log(`
-      Title: ${info.title}
-      Author(s): ${info.author}
-      Publisher: ${info.publisher}
-      Date published: ${info.publishedDate}
-      Description: ${info.description}
+      Title: ${book.volumeInfo.title}
+      Author(s): ${book.volumeInfo.authors}
+      Publisher: ${book.volumeInfo.publisher}
 
-      _____________________________________________
+      ID: ${book.id}
 
+      ____________________________________________
       `);
     });
   } catch (err) {
