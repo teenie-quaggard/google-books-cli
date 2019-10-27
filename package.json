@@ -1,7 +1,7 @@
 {
   "name": "google-books-cli",
   "version": "1.0.0",
-  "description": "A simple CLI that allow one to search the Google Books API and save a reading list.",
+  "description": "A simple CLI that allows one to search the Google Books API and save a reading list.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
