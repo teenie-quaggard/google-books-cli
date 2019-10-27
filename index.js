@@ -28,7 +28,9 @@ module.exports = () => {
       require('./commands/help')(args);
       break;
     default:
-      console.error(`Sorry, "${command}" is not a valid command.`);
+      console.error(
+        `Sorry, "${command}" is not a valid command. Please type 'books-cli help' to see the help menu.`
+      );
       break;
   }
 };
