@@ -35,7 +35,7 @@ After installing the project dependencies, you will be able to open the command 
 
 ## Dependencies
 
-### Projet Dependencies
+### Project Dependencies
 
 #### [dotenv](https://www.npmjs.com/package/dotenv)
 

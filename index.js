@@ -18,6 +18,9 @@ module.exports = () => {
     case 'books':
       require('./commands/books')(args);
       break;
+    case 'save':
+      require('./commands/save')(args);
+      break;
     case 'version':
       require('./commands/version')(args);
       break;
