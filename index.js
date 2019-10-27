@@ -6,12 +6,12 @@ module.exports = () => {
   const args = minimist(process.argv.slice(2));
   let command = args._[0] || 'help';
 
-  if (args.version || args.v) {
-    command = 'version';
-  }
-
   if (args.help || args.h) {
     command = 'help';
+  }
+
+  if (args.version || args.v) {
+    command = 'version';
   }
 
   switch (command) {
@@ -21,11 +21,14 @@ module.exports = () => {
     case 'save':
       require('./commands/save')(args);
       break;
-    case 'version':
-      require('./commands/version')(args);
+    case 'list':
+      require('./commands/list')(args);
       break;
     case 'help':
       require('./commands/help')(args);
+      break;
+    case 'version':
+      require('./commands/version')(args);
       break;
     default:
       console.error(
