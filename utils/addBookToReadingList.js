@@ -1,8 +1,9 @@
 const axios = require('axios');
 const fs = require('fs');
+const flashSpinner = require('./flashSpinner');
 
 module.exports = async id => {
-  await new Promise(resolve => setTimeout(resolve, 1000));
+  flashSpinner();
   try {
     const results = await axios.get(
       `https://www.googleapis.com/books/v1/volumes/${id}`
