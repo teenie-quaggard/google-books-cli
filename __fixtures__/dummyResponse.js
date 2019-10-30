@@ -1,6 +1,6 @@
 module.exports = {
  "kind": "books#volumes",
- "totalItems": 2072,
+ "totalItems": 2353,
  "items": [
   {
    "kind": "books#volume",
@@ -103,8 +103,58 @@ module.exports = {
   },
   {
    "kind": "books#volume",
+   "id": "APY1WZoSZ6kC",
+   "etag": "v+AFNpyM4Cc",
+   "selfLink": "https://www.googleapis.com/books/v1/volumes/APY1WZoSZ6kC",
+   "volumeInfo": {
+    "title": "Rules for the Dance",
+    "subtitle": "A Handbook for Writing and Reading Metrical Verse",
+    "authors": [
+     "Mary Oliver"
+    ],
+    "publisher": "Houghton Mifflin Harcourt",
+    "publishedDate": "1998",
+    "description": "An introduction to the sound, rhyme, meter, and scansion of metrical poetry with examples from the Elizabethan Age to Elizabeth Bishop",
+    "readingModes": {
+     "text": false,
+     "image": true
+    },
+    "maturityRating": "NOT_MATURE",
+    "allowAnonLogging": false,
+    "contentVersion": "0.0.2.0.preview.1",
+    "panelizationSummary": {
+     "containsEpubBubbles": false,
+     "containsImageBubbles": false
+    },
+    "imageLinks": {
+     "smallThumbnail": "http://books.google.com/books/content?id=APY1WZoSZ6kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+     "thumbnail": "http://books.google.com/books/content?id=APY1WZoSZ6kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+    },
+    "previewLink": "http://books.google.co.uk/books?id=APY1WZoSZ6kC&printsec=frontcover&dq=dance&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
+    "infoLink": "http://books.google.co.uk/books?id=APY1WZoSZ6kC&dq=dance&hl=&as_pt=BOOKS&source=gbs_api",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Rules_for_the_Dance.html?hl=&id=APY1WZoSZ6kC"
+   },
+   "saleInfo": {
+    "country": "GB"
+   },
+   "accessInfo": {
+    "country": "GB",
+    "epub": {
+     "isAvailable": false
+    },
+    "pdf": {
+     "isAvailable": false
+    },
+    "accessViewStatus": "SAMPLE"
+   },
+   "searchInfo": {
+    "textSnippet": "An introduction to the sound, rhyme, meter, and scansion of metrical poetry with examples from the Elizabethan Age to Elizabeth Bishop"
+   }
+  },
+  {
+   "kind": "books#volume",
    "id": "t-OLyzKAqDEC",
-   "etag": "DVbR+uavkc8",
+   "etag": "rXSI3+3+RQU",
    "selfLink": "https://www.googleapis.com/books/v1/volumes/t-OLyzKAqDEC",
    "volumeInfo": {
     "title": "Hitler's Dancers",
@@ -131,7 +181,7 @@ module.exports = {
      "smallThumbnail": "http://books.google.com/books/content?id=t-OLyzKAqDEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
      "thumbnail": "http://books.google.com/books/content?id=t-OLyzKAqDEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
     },
-    "previewLink": "http://books.google.co.uk/books?id=t-OLyzKAqDEC&printsec=frontcover&dq=dance&hl=&as_pt=BOOKS&cd=3&source=gbs_api",
+    "previewLink": "http://books.google.co.uk/books?id=t-OLyzKAqDEC&printsec=frontcover&dq=dance&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
     "infoLink": "http://books.google.co.uk/books?id=t-OLyzKAqDEC&dq=dance&hl=&as_pt=BOOKS&source=gbs_api",
     "canonicalVolumeLink": "https://books.google.com/books/about/Hitler_s_Dancers.html?hl=&id=t-OLyzKAqDEC"
    },
@@ -150,56 +200,6 @@ module.exports = {
    },
    "searchInfo": {
     "textSnippet": "The Nazis burned books and banned much modern art. However, few people know the fascinating story of German modern dance, which was the great exception."
-   }
-  },
-  {
-   "kind": "books#volume",
-   "id": "APY1WZoSZ6kC",
-   "etag": "JbcUxYkg3Rg",
-   "selfLink": "https://www.googleapis.com/books/v1/volumes/APY1WZoSZ6kC",
-   "volumeInfo": {
-    "title": "Rules for the Dance",
-    "subtitle": "A Handbook for Writing and Reading Metrical Verse",
-    "authors": [
-     "Mary Oliver"
-    ],
-    "publisher": "Houghton Mifflin Harcourt",
-    "publishedDate": "1998",
-    "description": "An introduction to the sound, rhyme, meter, and scansion of metrical poetry with examples from the Elizabethan Age to Elizabeth Bishop",
-    "readingModes": {
-     "text": false,
-     "image": true
-    },
-    "maturityRating": "NOT_MATURE",
-    "allowAnonLogging": false,
-    "contentVersion": "0.0.2.0.preview.1",
-    "panelizationSummary": {
-     "containsEpubBubbles": false,
-     "containsImageBubbles": false
-    },
-    "imageLinks": {
-     "smallThumbnail": "http://books.google.com/books/content?id=APY1WZoSZ6kC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-     "thumbnail": "http://books.google.com/books/content?id=APY1WZoSZ6kC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-    },
-    "previewLink": "http://books.google.co.uk/books?id=APY1WZoSZ6kC&printsec=frontcover&dq=dance&hl=&as_pt=BOOKS&cd=4&source=gbs_api",
-    "infoLink": "http://books.google.co.uk/books?id=APY1WZoSZ6kC&dq=dance&hl=&as_pt=BOOKS&source=gbs_api",
-    "canonicalVolumeLink": "https://books.google.com/books/about/Rules_for_the_Dance.html?hl=&id=APY1WZoSZ6kC"
-   },
-   "saleInfo": {
-    "country": "GB"
-   },
-   "accessInfo": {
-    "country": "GB",
-    "epub": {
-     "isAvailable": false
-    },
-    "pdf": {
-     "isAvailable": false
-    },
-    "accessViewStatus": "SAMPLE"
-   },
-   "searchInfo": {
-    "textSnippet": "An introduction to the sound, rhyme, meter, and scansion of metrical poetry with examples from the Elizabethan Age to Elizabeth Bishop"
    }
   },
   {
@@ -248,4 +248,4 @@ module.exports = {
    }
   }
  ]
-}
+};

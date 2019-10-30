@@ -42,7 +42,7 @@ module.exports = async args => {
         _____________________________________________________________
         `
       );
-      books.forEach(book => {
+      books.data.items.forEach(book => {
         console.log(`
         Title: ${book.volumeInfo.title}
         Author(s): ${book.volumeInfo.authors}
