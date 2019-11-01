@@ -72,7 +72,13 @@ This command displays a menu which lists available commands.
 
 This command displays the current verion of the programme.
 
-## 🙋🏻‍Things I learned
+## 🤖 Run some test!
+
+To run tests, write the following command in your terminal:
+
+`npm test`
+
+## 🙋🏻‍ Things I learned
 
 ### The `bin` file
 
@@ -96,7 +102,7 @@ The biggest thing I struggled with was creating tests for the functions that use
 
 The Jest docs taught me how to create a mock file system, but I had trouble mocking fs.readFile, especially when my function was not actually returning anything, it was just creating a console.log.
 
-## 🧘🏻‍Stretch goals
+## 🧘🏻‍ Stretch goals
 
 - Programmatically save items (not using a copy and paste method, but being able to select an item in the list by index or other selector)
 - Remove items from reading list
