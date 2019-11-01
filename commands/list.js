@@ -9,6 +9,8 @@ module.exports = async () => {
     spinner.stop();
   } catch (error) {
     spinner.stop();
-    console.error(`Sorry, there's been an error fetching your list: \n${error});
+    console.error(
+      `Sorry, there's been an error fetching your list: \n${error})`
+    );
   }
 };

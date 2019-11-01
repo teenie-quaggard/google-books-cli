@@ -1,17 +1,15 @@
-const axios = require('axios');
 const fs = require('fs');
 const flashSpinner = require('./flashSpinner');
+const searchUsingId = require('./searchUsingId');
 
 module.exports = async id => {
   flashSpinner();
   try {
-    const results = await axios.get(
-      `https://www.googleapis.com/books/v1/volumes/${id}`
-    );
+    const book = await searchUsingId(id);
 
-    const book = `\nTitle: ${results.data.volumeInfo.title}\nAuthor(s): ${results.data.volumeInfo.authors}\nPublisher: ${results.data.volumeInfo.publisher}\n`;
+    const bookData = `\nTitle: ${book.data.volumeInfo.title}\nAuthor(s): ${book.data.volumeInfo.authors}\nPublisher: ${book.data.volumeInfo.publisher}\n`;
 
-    fs.appendFile('reading-list.txt', book, err => {
+    await fs.appendFile('reading-list.txt', bookData, err => {
       if (err) {
         console.log(
           `Sorry there's been an error saving your book to the reading list.`
@@ -19,7 +17,7 @@ module.exports = async id => {
       }
     });
 
-    return results;
+    return book;
   } catch (error) {
     console.error(
       `Sorry, there has been an error. 

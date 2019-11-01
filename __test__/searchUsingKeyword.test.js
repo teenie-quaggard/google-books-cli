@@ -1,11 +1,11 @@
 const mockAxios = require('axios');
-const searchRequest = require('../utils/searchRequest');
-const dummyResponse = require('../__fixtures__/dummyResponse');
+const searchUsingKeyword = require('../utils/searchUsingKeyword');
+const dummyResponse = require('../__fixtures__/dummyKeywordResponse');
 
 test('it calls Google Books API and returns books', async () => {
   mockAxios.get.mockImplementationOnce(() => Promise.resolve(dummyResponse));
   const keyword = 'dance';
-  const books = await searchRequest(keyword);
+  const books = await searchUsingKeyword(keyword);
 
   expect(books).toEqual(dummyResponse);
   expect(mockAxios.get).toHaveBeenCalledTimes(1);
