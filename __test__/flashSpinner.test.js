@@ -1,8 +1,7 @@
 const flashSpinner = require('../utils/flashSpinner');
 
-jest.useFakeTimers();
-
 test('waits 2 seconds before showing response', () => {
+  jest.useFakeTimers();
   flashSpinner();
 
   expect(setTimeout).toHaveBeenCalledTimes(1);

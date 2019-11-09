@@ -3,7 +3,7 @@ const flashSpinner = require('./flashSpinner');
 
 module.exports = async () => {
   await flashSpinner();
-  fs.readFile('reading-list.txt', 'utf8', (err, list) => {
+  await fs.readFile('reading-list.txt', 'utf8', (err, list) => {
     if (err) {
       console.error(`There's been an issue finding your list!\n${err}`);
     } else if (!list) {
