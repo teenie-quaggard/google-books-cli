@@ -7,7 +7,6 @@ class Spinner {
   }
 
   start = () => this.instance.start();
-  waitForSpinner = () => new Promise(resolve => setTimeout(resolve, 5000));
   stop = () => this.instance.stopAndPersist();
 }
 
