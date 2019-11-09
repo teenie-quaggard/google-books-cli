@@ -1,14 +1,15 @@
 const printReadingList = require('../utils/printReadingList');
-const ora = require('ora');
+const Spinner = require('../utils/spinner');
 
 module.exports = async () => {
-  const spinner = ora().start();
+  const spinnerInstance = new Spinner();
+  spinnerInstance.start();
 
   try {
     await printReadingList();
-    spinner.stop();
+    spinnerInstance.stop();
   } catch (error) {
-    spinner.stop();
+    spinnerInstance.stop();
     console.error(
       `Sorry, there's been an error fetching your list: \n${error})`
     );
