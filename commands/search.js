@@ -1,13 +1,14 @@
-const ora = require('ora');
+const Spinner = require('../utils/spinner');
 const searchUsingKeyword = require('../utils/searchUsingKeyword.js');
 
 module.exports = async args => {
-  const spinner = ora().start();
+  const spinnerInstance = new Spinner();
+  spinnerInstance.start();
 
   try {
     const keyword = args.keyword || args._1;
     const books = await searchUsingKeyword(keyword);
-    spinner.stop();
+    spinnerInstance.stop();
 
     if (keyword === undefined) {
       console.error(`
@@ -55,7 +56,7 @@ module.exports = async args => {
       });
     }
   } catch (err) {
-    spinner.stop();
+    spinnerInstance.stop();
     console.error(err);
   }
 };
