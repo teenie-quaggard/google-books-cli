@@ -1,13 +1,14 @@
-const ora = require('ora');
+const Spinner = require('../utils/spinner');
 const addBookToReadingList = require('../utils/addBookToReadingList.js');
 
 module.exports = async args => {
-  const spinner = ora().start();
+  const spinnerInstance = new Spinner();
+  spinnerInstance.start();
 
   try {
     const id = args.id || args._1;
     const saveBook = await addBookToReadingList(id);
-    spinner.stop();
+    spinnerInstance.stop();
 
     /**********************RESPONSE**************************/
     console.log(
@@ -26,7 +27,7 @@ module.exports = async args => {
       `
     );
   } catch (error) {
-    spinner.stop();
+    spinnerInstance.stop();
     console.error(error);
   }
 };
