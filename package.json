@@ -4,7 +4,9 @@
   "description": "A simple CLI that allows one to search the Google Books API and save a reading list.",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "watch": "jest --watchAll",
+    "coverage": "jest --coverage"
   },
   "bin": {
     "books-cli": "bin/books-cli"
