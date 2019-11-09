@@ -3,7 +3,7 @@ const flashSpinner = require('./flashSpinner');
 const searchUsingId = require('./searchUsingId');
 
 module.exports = async id => {
-  flashSpinner();
+  await flashSpinner();
   try {
     const book = await searchUsingId(id);
 
