@@ -2,7 +2,7 @@ const mockAxios = require('axios');
 const searchUsingId = require('../utils/searchUsingId');
 const dummyIdResponse = require('../__fixtures__/dummyIdResponse');
 
-describe('searchUsingId', () => {
+describe('searchUsingId.js', () => {
   it('calls Google Books API using an ID and returns one book', async () => {
     mockAxios.get.mockImplementationOnce(() =>
       Promise.resolve(dummyIdResponse)
