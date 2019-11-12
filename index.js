@@ -2,8 +2,8 @@ const minimist = require('minimist');
 const { version } = require('./package.json');
 
 const Spinner = require('./utils/spinner');
-const printReadingList = require('./utils/printReadingList');
 const searchUsingKeyword = require('./utils/searchUsingKeyword');
+const printReadingList = require('./utils/printReadingList');
 
 module.exports = () => {
   const spinnerInstance = new Spinner();
