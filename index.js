@@ -1,7 +1,9 @@
 const minimist = require('minimist');
 const { version } = require('./package.json');
-const printReadingList = require('./utils/printReadingList');
+
 const Spinner = require('./utils/spinner');
+const printReadingList = require('./utils/printReadingList');
+const searchUsingKeyword = require('./utils/searchUsingKeyword');
 
 module.exports = () => {
   const spinnerInstance = new Spinner();
@@ -18,7 +20,7 @@ module.exports = () => {
 
   switch (command) {
     case 'search':
-      require('./commands/search')(args);
+      require('./commands/search')(args, searchUsingKeyword, spinnerInstance);
       break;
     case 'save':
       require('./commands/save')(args);
