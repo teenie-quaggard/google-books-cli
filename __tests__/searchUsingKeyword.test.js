@@ -23,7 +23,7 @@ describe('searchUsingKeyword.js', () => {
     expect(error.message).toBe('Incorrect keyword input.');
   });
 
-  it('throws an error if a keyword is not recieved as a string', async () => {
+  it('throws an error if a keyword is not received as a string', async () => {
     const error = await searchUsingKeyword(true);
     expect(error.name).toBe('Error');
     expect(error.message).toBe('Incorrect keyword input.');

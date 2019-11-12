@@ -7,9 +7,11 @@ module.exports = async keyword => {
     if (!keyword || typeof keyword !== 'string') {
       throw new Error('Incorrect keyword input.');
     }
+
     const results = await axios.get(
       `https://www.googleapis.com/books/v1/volumes?q=${keyword}&printType=books&startIndex=0&maxResults=5&projection=lite`
     );
+
     return results;
   } catch (error) {
     if (error.message === 'Request failed with status code 503') {
