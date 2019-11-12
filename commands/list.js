@@ -1,12 +1,10 @@
-const printReadingList = require('../utils/printReadingList');
 const Spinner = require('../utils/spinner');
-
-module.exports = async () => {
+module.exports = async (args, cb) => {
   const spinnerInstance = new Spinner();
   spinnerInstance.start();
 
   try {
-    await printReadingList();
+    await cb();
     spinnerInstance.stop();
   } catch (error) {
     spinnerInstance.stop();

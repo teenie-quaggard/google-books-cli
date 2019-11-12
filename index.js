@@ -1,5 +1,6 @@
 const minimist = require('minimist');
 const { version } = require('./package.json');
+const printReadingList = require('./utils/printReadingList');
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
@@ -21,7 +22,7 @@ module.exports = () => {
       require('./commands/save')(args);
       break;
     case 'list':
-      require('./commands/list')(args);
+      require('./commands/list')(args, printReadingList);
       break;
     case 'help':
       require('./commands/help')(args);
