@@ -1,8 +1,10 @@
 const minimist = require('minimist');
 const { version } = require('./package.json');
 const printReadingList = require('./utils/printReadingList');
+const Spinner = require('./utils/spinner');
 
 module.exports = () => {
+  const spinnerInstance = new Spinner();
   const args = minimist(process.argv.slice(2));
   let command = args._[0] || 'help';
 
@@ -22,7 +24,7 @@ module.exports = () => {
       require('./commands/save')(args);
       break;
     case 'list':
-      require('./commands/list')(args, printReadingList);
+      require('./commands/list')(args, printReadingList, spinnerInstance);
       break;
     case 'help':
       require('./commands/help')(args);
