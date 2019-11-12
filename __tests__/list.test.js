@@ -10,4 +10,11 @@ describe('list.js', () => {
       'Incorrect callback function passed to list command.'
     );
   });
+
+  it('throws an error if a spinner has not been passed to the list command', async () => {
+    const printReadingList = jest.fn(() => true);
+    const error = await list('list', printReadingList, null);
+    expect(error.name).toBe('Error');
+    expect(error.message).toBe('Error with spinner.');
+  });
 });
