@@ -1,5 +1,5 @@
 const minimist = require('minimist');
-const { version } = require('../package.json');
+const { version } = require('./package.json');
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
