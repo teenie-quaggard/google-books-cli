@@ -1,9 +1,9 @@
 module.exports = (args, version) => {
   try {
-    console.log(`This is version ${version}.`);
     if (!version) {
       throw new Error('Sorry, the current version cannot be found.');
     }
+    console.log(`This is version ${version}.`);
     return version;
   } catch (error) {
     console.error(error);
