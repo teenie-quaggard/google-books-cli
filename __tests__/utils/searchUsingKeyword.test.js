@@ -1,6 +1,6 @@
 const mockAxios = require('axios');
-const searchUsingKeyword = require('../utils/searchUsingKeyword');
-const dummyKeywordResponse = require('../__fixtures__/dummyKeywordResponse');
+const searchUsingKeyword = require('../../utils/searchUsingKeyword');
+const dummyKeywordResponse = require('../../__fixtures__/dummyKeywordResponse');
 
 describe('searchUsingKeyword.js', () => {
   it('calls Google Books API and returns books', async () => {

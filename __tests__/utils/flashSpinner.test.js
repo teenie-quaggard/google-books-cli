@@ -1,4 +1,4 @@
-const flashSpinner = require('../utils/flashSpinner');
+const flashSpinner = require('../../utils/flashSpinner');
 
 test('waits 2 seconds before showing response', () => {
   jest.useFakeTimers();

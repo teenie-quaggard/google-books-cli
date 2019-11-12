@@ -1,5 +1,5 @@
-const versionCommand = require('../commands/version');
-const { version } = require('../package.json');
+const versionCommand = require('../../commands/version');
+const { version } = require('../../package.json');
 
 describe('list.js', () => {
   it('shows the current version of the app when called', async () => {
