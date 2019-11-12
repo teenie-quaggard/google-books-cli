@@ -1,4 +1,5 @@
 const minimist = require('minimist');
+const { version } = require('../package.json');
 
 module.exports = () => {
   const args = minimist(process.argv.slice(2));
@@ -26,7 +27,7 @@ module.exports = () => {
       require('./commands/help')(args);
       break;
     case 'version':
-      require('./commands/version')(args);
+      require('./commands/version')(args, version);
       break;
     default:
       console.error(
