@@ -2,32 +2,16 @@ const commandParameterCheck = require('../utils/commandParameterCheck');
 const errorHandle = require('../utils/errorHandle');
 const printSearchResponse = require('../utils/printSearchResponse');
 
-module.exports = async (args, cb, spinnerInstance) => {
-  await commandParameterCheck(cb, spinnerInstance);
+module.exports = async (args, searchUsingKeyword, spinnerInstance) => {
+  await commandParameterCheck(searchUsingKeyword, spinnerInstance);
   spinnerInstance.start();
 
   try {
     const keyword = args.keyword || args._1;
-    const books = await cb(keyword);
+    const books = await searchUsingKeyword(keyword);
     spinnerInstance.stop();
 
-    if (keyword === undefined || (keyword === true && keyword !== 'true')) {
-      throw new Error(`
-      _____________________________________________________________
-      
-      Your search phrase returned undefined.  
-      Please ensure that you have used the --keyword flag and have followed it with a search term.
-      Queries of more than one word should be wrapped in quotation marks.
-
-      Your query should follow one of the following structures: 
-      
-      books-cli search --keyword word \n
-      books-cli search --keyword "search phrase"
-      
-      Please try searching again.
-      _____________________________________________________________
-      `);
-    } else if (books.data.totalItems === 0) {
+    if (books.data.totalItems === 0) {
       throw new Error(`
       _____________________________________________________________
       

@@ -8,7 +8,7 @@ module.exports = (error, spinnerInstance) => {
       throw new Error("Sorry, there's been an error with the Spinner");
     }
     spinnerInstance.stop();
-    throw new Error(`Sorry there's been a problem.`);
+    throw new Error();
   } catch (error) {
     console.error(error);
     return error;

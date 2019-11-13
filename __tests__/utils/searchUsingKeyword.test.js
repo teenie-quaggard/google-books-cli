@@ -20,12 +20,12 @@ describe('searchUsingKeyword.js', () => {
   it('throws an error if a keyword is not inputted by user', async () => {
     const error = await searchUsingKeyword();
     expect(error.name).toBe('Error');
-    expect(error.message).toBe('Incorrect keyword input.');
+    expect(error.message).toMatch(/Your search phrase returned undefined./);
   });
 
   it('throws an error if a keyword is not received as a string', async () => {
     const error = await searchUsingKeyword(true);
     expect(error.name).toBe('Error');
-    expect(error.message).toBe('Incorrect keyword input.');
+    expect(error.message).toMatch(/Your search phrase returned undefined./);
   });
 });

@@ -4,8 +4,25 @@ const flashSpinner = require('./flashSpinner');
 module.exports = async keyword => {
   await flashSpinner();
   try {
-    if (!keyword || typeof keyword !== 'string') {
-      throw new Error('Incorrect keyword input.');
+    if (
+      !keyword ||
+      keyword === undefined ||
+      (keyword === true && keyword !== 'true')
+    ) {
+      throw new Error(`
+      _____________________________________________________________
+      
+      Your search phrase returned undefined.  
+      Please ensure that you have used the --keyword flag and have followed it with a search term.
+      Queries of more than one word should be wrapped in quotation marks.
+
+      Your query should follow one of the following structures: 
+      
+      books-cli search --keyword word \n
+      books-cli search --keyword "search phrase"
+      
+      Please try searching again.
+      _____________________________________________________________`);
     }
 
     const results = await axios.get(

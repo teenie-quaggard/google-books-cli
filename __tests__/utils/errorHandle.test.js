@@ -24,6 +24,5 @@ describe('errorHandle function', () => {
     const spinnerInstance = { stop: () => true };
     const errorHandleFunction = await errorHandle(undefined, spinnerInstance);
     expect(errorHandleFunction.name).toBe('Error');
-    expect(errorHandleFunction.message).toBe("Sorry there's been a problem.");
   });
 });
