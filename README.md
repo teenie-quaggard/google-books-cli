@@ -34,6 +34,9 @@ If your seach term is one word you can use it as is; if your search is made up o
 
 For example:
 `books-cli search --keyword dogs`
+
+or
+
 `books-cli search --keyword 'dog diets'`
 
 Your results will contain five books, including a title, author and publisher, as well as a unique ID.
@@ -128,7 +131,7 @@ I spent a lot of time researching how to test user input into the command line i
 
 One question I had was that I was unsure of how much modularisation was too much. As I tested my code, it became apparent that I could modularise further and further. Is there a point where splintering my code up into many tiny files actually hinders its legibility? Coming off of that, I was also unsure of best practices for file structure. This is something that could certainly be improved upon.
 
-Another question I had was that I was unsure of when to throw errors. With the modularisation of my code, errors are passed from one function to another. Is it better practice to pass an error to the highest layer, or is it better to throw an error in the place it breaks (or both)?! 
+Another question I had was that I was unsure of when to throw errors. With the modularisation of my code, errors are passed from one function to another. Is it better practice to pass an error to the highest layer, or is it better to throw an error in the place it breaks (or both)?!
 
 ## 🧘🏻‍Stretch goals
 

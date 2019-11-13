@@ -28,6 +28,7 @@ module.exports = (keyword, books) => {
     ____________________________________________
     `);
     });
+    return;
   } catch (error) {
     errorHandle(error);
   }

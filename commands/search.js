@@ -4,7 +4,7 @@ const printSearchResponse = require('../utils/printSearchResponse');
 
 module.exports = async (args, searchUsingKeyword, spinnerInstance) => {
   await commandParameterCheck(searchUsingKeyword, spinnerInstance);
-  spinnerInstance.start();
+  await spinnerInstance.start();
 
   try {
     const keyword = args.keyword || args._1;
@@ -26,9 +26,9 @@ module.exports = async (args, searchUsingKeyword, spinnerInstance) => {
       _____________________________________________________________
       `);
     } else {
-      printSearchResponse(keyword, books);
+      return printSearchResponse(keyword, books);
     }
   } catch (error) {
-    errorHandle(error, spinnerInstance);
+    return errorHandle(error, spinnerInstance);
   }
 };

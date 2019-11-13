@@ -6,14 +6,13 @@ describe('commandParameterCheck.js', () => {
     const check = await commandParameterCheck(undefined, spinnerInstance);
     expect(check.name).toBe('Error');
     expect(check.message).toBe(
-      'Error: Incorrect callback function passed to list command.'
+      'Error: Incorrect callback function passed to command.'
     );
   });
 
   it('throws an error if not passed a spinnerInstance', async () => {
     const cb = jest.fn();
     const check = await commandParameterCheck(cb);
-    console.log('check', check);
     expect(check.name).toBe('Error');
     expect(check.message).toBe("Sorry, there's been an error with the Spinner");
   });
