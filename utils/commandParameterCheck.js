@@ -4,8 +4,9 @@ module.exports = async (cb, spinnerInstance) => {
     if (!cb) {
       throw new Error('Incorrect callback function passed to list command.');
     } else if (!spinnerInstance) {
-      throw new Error('Error with spinner.');
+      throw new Error();
     }
+    return;
   } catch (error) {
     return errorHandle(error, spinnerInstance);
   }
