@@ -127,6 +127,10 @@ The Jest docs taught me how to create a mock file system, but I had trouble mock
 
 - a JavaScript testing framework
 
+### [@babel/plugin-proposal-class-properties](https://www.npmjs.com/package/@babel/plugin-proposal-class-properties)
+
+- allows us to transform static class properties so that they can be handled by Jest
+
 ## Helpful Resources:
 
 https://timber.io/blog/creating-a-real-world-cli-app-with-node/
