@@ -1,9 +1,16 @@
 module.exports = (error, spinnerInstance) => {
-  if (!spinnerInstance) {
+  try {
+    if (!error && !spinnerInstance) {
+      throw new Error(
+        'Sorry, the errorHandle function needs to be passed an error and a spinnerInstance.'
+      );
+    } else if (!spinnerInstance) {
+      throw new Error("Sorry, there's been an error with the Spinner");
+    }
+    spinnerInstance.stop();
+    throw new Error(`Sorry there's been a problem.`);
+  } catch (error) {
     console.error(error);
     return error;
   }
-  spinnerInstance.stop();
-  console.error(error);
-  return error;
 };
